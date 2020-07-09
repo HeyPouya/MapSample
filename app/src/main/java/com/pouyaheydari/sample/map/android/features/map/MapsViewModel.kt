@@ -18,5 +18,10 @@ class MapsViewModel(private val repository: DataRepository) : BaseViewModel() {
         }
     }
 
+    /**
+     * Turns the MutableLiveData to LiveData to prevent accidental postValue on the Fragment
+     *
+     * @return liveData of type [VehiclesData]
+     */
     fun getVehicleLiveData(): LiveData<VehiclesData> = liveData
 }

@@ -9,7 +9,7 @@ import com.pouyaheydari.sample.map.android.pojo.Vehicle
 interface VehicleDao {
 
     @Query("SELECT * FROM vehicle")
-    suspend fun getVehicles(): List<Vehicle>
+    suspend fun getOfflineVehicles(): List<Vehicle>
 
     @Query("DELETE FROM vehicle")
     suspend fun deleteAllVehicles()

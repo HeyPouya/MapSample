@@ -9,4 +9,9 @@ val roomModule = module {
     single {
         Room.databaseBuilder(androidApplication(), AppDatabase::class.java, "vehicles").build()
     }
+
+    single {
+        val appDatabase: AppDatabase = get()
+        appDatabase.userDao()
+    }
 }

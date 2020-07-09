@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pouyaheydari.sample.map.android.R
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashFragment : Fragment() {
 
 
-    private lateinit var viewModel: SplashViewModel
+    private val viewModel: SplashViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

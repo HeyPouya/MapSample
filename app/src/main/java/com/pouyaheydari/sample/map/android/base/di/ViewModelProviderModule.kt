@@ -9,6 +9,6 @@ import org.koin.dsl.module
  * Represents instance of all ViewModels and injects [DataRepository] in ViewModels.
  */
 val viewModelModule = module {
-    viewModel { SplashViewModel() }
+    viewModel { SplashViewModel(get()) }
     viewModel { MapsViewModel(get()) }
 }

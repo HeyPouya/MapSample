@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Map Sample</string>
+    <string name="offline_open_no_data_error">You don\'t have a network connection and have not opened application with an active internet before. Please open the app with an active internet connection at least once.</string>
+    <string name="no_data_available_to_show">No data available to show</string>
+    <string name="ok">OK</string>
 </resources>

@@ -12,6 +12,6 @@ val roomModule = module {
 
     single {
         val appDatabase: AppDatabase = get()
-        appDatabase.userDao()
+        appDatabase.vehicleDao()
     }
 }

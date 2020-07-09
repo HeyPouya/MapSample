@@ -11,7 +11,7 @@ data class VehiclesData(val vehicles: List<Vehicle>)
 @JsonClass(generateAdapter = true)
 data class Vehicle(
     @PrimaryKey(autoGenerate = true)
-    val uid: Int,
+    val uid: Int?,
     val bearing: Float,
     val image_url: String,
     val lat: Double,

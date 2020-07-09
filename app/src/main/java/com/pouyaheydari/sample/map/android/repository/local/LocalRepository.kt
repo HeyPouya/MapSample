@@ -9,5 +9,5 @@ class LocalRepository(private val vehicleDao: VehicleDao) : VehicleDao {
 
     override suspend fun deleteAllVehicles() = vehicleDao.deleteAllVehicles()
 
-    override suspend fun insertVehicle(vehicle: Vehicle) = vehicleDao.insertVehicle(vehicle)
+    override suspend fun insertVehicle(vehicle: List<Vehicle>) = vehicleDao.insertVehicle(vehicle)
 }

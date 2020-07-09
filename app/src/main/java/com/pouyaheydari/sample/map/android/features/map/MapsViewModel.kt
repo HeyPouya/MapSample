@@ -5,10 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.pouyaheydari.sample.map.android.base.BaseViewModel
 import com.pouyaheydari.sample.map.android.pojo.VehiclesData
-import com.pouyaheydari.sample.map.android.repository.DataRepository
+import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
 import kotlinx.coroutines.launch
 
-class MapsViewModel(private val repository: DataRepository) : BaseViewModel() {
+class MapsViewModel(private val repository: DataRepositoryInterface) : BaseViewModel() {
     private val liveData = MutableLiveData<VehiclesData>()
 
     init {

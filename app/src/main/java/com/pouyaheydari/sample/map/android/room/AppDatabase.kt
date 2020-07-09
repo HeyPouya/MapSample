@@ -6,5 +6,5 @@ import com.pouyaheydari.sample.map.android.pojo.Vehicle
 
 @Database(entities = [Vehicle::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): VehicleDao
+    abstract fun vehicleDao(): VehicleDao
 }

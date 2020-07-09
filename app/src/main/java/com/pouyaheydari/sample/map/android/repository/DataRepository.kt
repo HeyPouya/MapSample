@@ -10,11 +10,17 @@ class DataRepository(
     private val localRepository: LocalRepository
 ) : DataRepositoryInterface {
 
-    override suspend fun getVehicles(): VehiclesData = networkRepository.getVehicles()
+    override suspend fun getVehicles(): VehiclesData {
+        val data = networkRepository.getVehicles()
+        deleteAllVehicles()
+        insertVehicle(data.vehicles)
+        return data
+    }
 
     override suspend fun getOfflineVehicles(): List<Vehicle> = localRepository.getOfflineVehicles()
 
     override suspend fun deleteAllVehicles() = localRepository.deleteAllVehicles()
 
-    override suspend fun insertVehicle(vehicle: Vehicle) = localRepository.insertVehicle(vehicle)
+    override suspend fun insertVehicle(vehicle: List<Vehicle>) =
+        localRepository.insertVehicle(vehicle)
 }

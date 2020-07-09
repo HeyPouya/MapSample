@@ -1,14 +1,14 @@
 package com.pouyaheydari.sample.map.android.features.splash
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pouyaheydari.sample.map.android.R
+import com.pouyaheydari.sample.map.android.base.BaseFragment
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class SplashFragment : Fragment() {
+class SplashFragment : BaseFragment() {
 
 
     private val viewModel: SplashViewModel by viewModel()

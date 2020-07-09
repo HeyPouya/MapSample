@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/mapsFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/mapsFragment"
@@ -14,5 +14,9 @@
         android:id="@+id/splashFragment"
         android:name="com.pouyaheydari.sample.map.android.features.splash.SplashFragment"
         android:label="splash_fragment"
-        tools:layout="@layout/splash_fragment" />
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
 </navigation>

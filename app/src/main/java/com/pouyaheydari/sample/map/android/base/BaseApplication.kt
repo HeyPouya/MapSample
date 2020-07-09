@@ -1,7 +1,7 @@
-package com.pouyaheydari.sample.map.android.features.base
+package com.pouyaheydari.sample.map.android.base
 
 import android.app.Application
-import com.pouyaheydari.sample.map.android.features.base.di.viewModelModule
+import com.pouyaheydari.sample.map.android.base.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

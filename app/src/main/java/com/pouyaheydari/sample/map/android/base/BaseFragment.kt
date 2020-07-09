@@ -1,4 +1,4 @@
-package com.pouyaheydari.sample.map.android.features.base
+package com.pouyaheydari.sample.map.android.base
 
 import androidx.fragment.app.Fragment
 

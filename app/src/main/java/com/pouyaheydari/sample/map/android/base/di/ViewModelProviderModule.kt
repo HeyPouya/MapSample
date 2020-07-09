@@ -1,4 +1,4 @@
-package com.pouyaheydari.sample.map.android.features.base.di
+package com.pouyaheydari.sample.map.android.base.di
 
 import com.pouyaheydari.sample.map.android.features.splash.SplashViewModel
 import org.koin.android.viewmodel.dsl.viewModel

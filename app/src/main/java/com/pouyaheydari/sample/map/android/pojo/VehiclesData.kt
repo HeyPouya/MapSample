@@ -1,7 +1,11 @@
 package com.pouyaheydari.sample.map.android.pojo
 
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class VehiclesData(val vehicles: List<Vehicle>)
 
+@JsonClass(generateAdapter = true)
 data class Vehicle(
     val bearing: Int,
     val image_url: String,

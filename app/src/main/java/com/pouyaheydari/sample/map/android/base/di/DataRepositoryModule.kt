@@ -10,7 +10,7 @@ import org.koin.dsl.module
  * this module injects [NetworkRepository] in [DataRepository].
  */
 val dataRepositoryModule = module {
-    single<RetrofitInterface> {
+    single {
         DataRepository(get())
     }
 

@@ -75,4 +75,9 @@ dependencies {
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    // Room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+
+
 }

@@ -44,6 +44,7 @@ class SplashFragment : BaseFragment() {
             .setTitle(getString(R.string.no_data_available_to_show))
             .setMessage(getString(R.string.offline_open_no_data_error))
             .setPositiveButton(getString(R.string.ok)) { _: DialogInterface, _: Int -> requireActivity().finish() }
+            .setCancelable(false)
             .show()
     }
 

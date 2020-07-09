@@ -6,7 +6,7 @@ import androidx.room.Query
 import com.pouyaheydari.sample.map.android.pojo.Vehicle
 
 @Dao
-interface RoomInterface {
+interface VehicleDao {
 
     @Query("SELECT * FROM vehicle")
     suspend fun getVehicles(): List<Vehicle>

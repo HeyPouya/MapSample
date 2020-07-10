@@ -7,4 +7,5 @@
     <string name="vehicle_lat">Lat: %s</string>
     <string name="vehicle_lng">Lng: %s</string>
     <string name="vehicle_bearing">Bearing: %s</string>
+    <string name="vehicle_list">Vehicle List</string>
 </resources>

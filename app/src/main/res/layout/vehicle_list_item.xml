@@ -5,9 +5,6 @@
     android:id="@+id/cardRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
     app:cardUseCompatPadding="true"
     tools:cardBackgroundColor="@color/colorPrimary">
 
@@ -22,6 +19,7 @@
             style="@style/VehicleListTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_vehicle_type"
             tools:text="ECO" />
 
         <TextView
@@ -29,6 +27,7 @@
             style="@style/VehicleListTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
             tools:text="35.7575154" />
 
         <TextView
@@ -36,6 +35,7 @@
             style="@style/VehicleListTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
             tools:text="51.4104956" />
 
         <TextView
@@ -43,6 +43,7 @@
             style="@style/VehicleListTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_bearing"
             tools:text="54" />
 
     </LinearLayout>

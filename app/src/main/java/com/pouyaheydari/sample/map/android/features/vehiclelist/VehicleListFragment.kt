@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import com.pouyaheydari.sample.map.android.R
 import com.pouyaheydari.sample.map.android.base.BaseFragment
 import com.pouyaheydari.sample.map.android.features.vehiclelist.adapter.VehicleListAdapter
+import kotlinx.android.synthetic.main.item_toolbar_back.*
 import kotlinx.android.synthetic.main.vehicle_list_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -25,6 +26,7 @@ class VehicleListFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        txtTitle.text = getString(R.string.vehicle_list)
         setUpRecyclerView()
         viewModel.getVehicleListLiveData().observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)

@@ -21,7 +21,8 @@ class BaseApplication : Application() {
                 retrofitModule,
                 moshiModule,
                 dataRepositoryModule,
-                moshiConverterFactoryModule
+                moshiConverterFactoryModule,
+                roomModule
             )
         }
     }

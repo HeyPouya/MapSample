@@ -1,8 +1,9 @@
 package com.pouyaheydari.sample.map.android.base.di
 
 import com.pouyaheydari.sample.map.android.repository.DataRepository
+import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
+import com.pouyaheydari.sample.map.android.repository.local.LocalRepository
 import com.pouyaheydari.sample.map.android.repository.network.NetworkRepository
-import com.pouyaheydari.sample.map.android.retrofit.RetrofitInterface
 import org.koin.dsl.module
 
 /**
@@ -10,11 +11,14 @@ import org.koin.dsl.module
  * this module injects [NetworkRepository] in [DataRepository].
  */
 val dataRepositoryModule = module {
-    single {
-        DataRepository(get())
+    single<DataRepositoryInterface> {
+        DataRepository(get(), get())
     }
 
     single {
         NetworkRepository(get())
+    }
+    single {
+        LocalRepository(get())
     }
 }

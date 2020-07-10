@@ -2,6 +2,7 @@ package com.pouyaheydari.sample.map.android.features.splash
 
 import android.content.DialogInterface
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,12 @@ class SplashFragment : BaseFragment() {
                 else -> throw IllegalArgumentException("The navigation for ${it.name} is not provided in the fragment")
             }
         })
-        viewModel.decideNextView(isNetworkAvailable(requireContext()))
+
+        Handler().postDelayed(
+            { viewModel.decideNextView(isNetworkAvailable(requireContext())) },
+            1500
+        )
+
     }
 
     private fun showOfflineNoDataError() {

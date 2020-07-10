@@ -1,8 +1,11 @@
 package com.pouyaheydari.sample.map.android.utils
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
-import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 
 /**
  * This function fetches images from the URL and turns it to the bitmap
@@ -11,12 +14,11 @@ import com.squareup.picasso.Picasso
  * @param url image's url address
  * @param showOnMap a lambda to show fetched bitmap as a marker
  */
-fun getBitmap(url: String, showOnMap: (Bitmap) -> Unit) =
-    Picasso.get().load(url).into(object : com.squareup.picasso.Target {
-        override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-            bitmap?.let { showOnMap(it) }
+fun getBitmap(context: Context, url: String, showOnMap: (Bitmap) -> Unit) =
+    Glide.with(context).asBitmap().load(url).into(object : CustomTarget<Bitmap>() {
+        override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+            showOnMap(resource)
         }
 
-        override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
-        override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {}
+        override fun onLoadCleared(placeholder: Drawable?) {}
     })

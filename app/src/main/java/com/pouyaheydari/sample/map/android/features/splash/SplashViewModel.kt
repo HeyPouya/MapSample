@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
-import com.pouyaheydari.sample.map.android.utils.ViewNavigationEnum
+import com.pouyaheydari.sample.map.android.pojo.ViewNavigationEnum
 import kotlinx.coroutines.launch
 
 class SplashViewModel(private val dataRepository: DataRepositoryInterface) : ViewModel() {

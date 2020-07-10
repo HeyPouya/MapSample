@@ -3,4 +3,8 @@
     <string name="offline_open_no_data_error">You don\'t have a network connection and have not opened application with an active internet before. Please open the app with an active internet connection at least once.</string>
     <string name="no_data_available_to_show">No data available to show</string>
     <string name="ok">OK</string>
+    <string name="vehicle_type">Type: %s</string>
+    <string name="vehicle_lat">Lat: %s</string>
+    <string name="vehicle_lng">Lng: %s</string>
+    <string name="vehicle_bearing">Bearing: %s</string>
 </resources>

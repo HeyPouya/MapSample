@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.pouyaheydari.sample.map.android.R
 import com.pouyaheydari.sample.map.android.base.BaseFragment
-import com.pouyaheydari.sample.map.android.utils.ViewNavigationEnum
+import com.pouyaheydari.sample.map.android.pojo.ViewNavigationEnum
 import com.pouyaheydari.sample.map.android.utils.isNetworkAvailable
 import org.koin.android.viewmodel.ext.android.viewModel
 

@@ -4,13 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import com.pouyaheydari.sample.map.android.R
 import com.pouyaheydari.sample.map.android.base.BaseFragment
+import com.pouyaheydari.sample.map.android.features.vehiclelist.adapter.VehicleListAdapter
+import kotlinx.android.synthetic.main.vehicle_list_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class VehicleListFragment : BaseFragment() {
 
     private val viewModel: VehicleListViewModel by viewModel()
+    private lateinit var adapter: VehicleListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,7 +25,15 @@ class VehicleListFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setUpRecyclerView()
+        viewModel.getVehicleListLiveData().observe(viewLifecycleOwner, Observer {
+            adapter.submitList(it)
+        })
+    }
 
+    private fun setUpRecyclerView() {
+        adapter = VehicleListAdapter()
+        recycler.adapter = adapter
     }
 
 }

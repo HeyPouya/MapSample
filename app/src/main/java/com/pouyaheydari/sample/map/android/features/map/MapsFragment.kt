@@ -30,6 +30,10 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
         return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
+    override fun tryAgainDialogAction() {
+        viewModel.getVehicles()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -59,6 +63,7 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
+        viewModel.getVehicles()
         viewModel.getVehicleLiveData().observe(viewLifecycleOwner, Observer {
             showMarkers(googleMap, it.vehicles)
         })

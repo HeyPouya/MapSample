@@ -6,16 +6,15 @@ import androidx.lifecycle.viewModelScope
 import com.pouyaheydari.sample.map.android.base.BaseViewModel
 import com.pouyaheydari.sample.map.android.pojo.VehiclesData
 import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
+import com.pouyaheydari.sample.map.android.utils.coroutinesExceptionHandler
 import kotlinx.coroutines.launch
 
 class MapsViewModel(private val repository: DataRepositoryInterface) : BaseViewModel() {
     private val liveData = MutableLiveData<VehiclesData>()
 
-    init {
-        viewModelScope.launch {
-            val vehicles = repository.getVehicles()
-            liveData.postValue(vehicles)
-        }
+    fun getVehicles() = viewModelScope.launch(coroutinesExceptionHandler(exceptionLiveData)) {
+        val vehicles = repository.getVehicles()
+        liveData.postValue(vehicles)
     }
 
     /**

@@ -9,4 +9,6 @@
     <string name="vehicle_bearing">Bearing: %s</string>
     <string name="vehicle_list">Vehicle List</string>
     <string name="pouya_heydari">Pouya Heydari!</string>
+    <string name="error_fetching_data">Error fetching data</string>
+    <string name="try_again">Try again</string>
 </resources>

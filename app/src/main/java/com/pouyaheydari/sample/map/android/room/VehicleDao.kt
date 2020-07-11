@@ -5,6 +5,10 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.pouyaheydari.sample.map.android.pojo.Vehicle
 
+/**
+ * Vehicle Dao to be used by room
+ *
+ */
 @Dao
 interface VehicleDao {
 

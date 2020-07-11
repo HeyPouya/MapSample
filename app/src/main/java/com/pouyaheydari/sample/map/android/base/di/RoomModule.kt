@@ -5,6 +5,9 @@ import com.pouyaheydari.sample.map.android.room.AppDatabase
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
+/**
+ * Provides Room instance
+ */
 val roomModule = module {
     single {
         Room.databaseBuilder(androidApplication(), AppDatabase::class.java, "vehicles").build()

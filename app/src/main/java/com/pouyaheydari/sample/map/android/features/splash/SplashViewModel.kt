@@ -9,10 +9,20 @@ import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
 import com.pouyaheydari.sample.map.android.utils.coroutinesExceptionHandler
 import kotlinx.coroutines.launch
 
+/**
+ * Splash page ViewModel
+ *
+ * @property dataRepository
+ */
 class SplashViewModel(private val dataRepository: DataRepositoryInterface) : BaseViewModel() {
 
     private val liveData = MutableLiveData<ViewNavigationEnum>()
 
+    /**
+     * Decides which view should be presented to the user based on the network connection and if there is any data available on the device
+     *
+     * @param networkAvailable
+     */
     fun decideNextView(networkAvailable: Boolean) =
         viewModelScope.launch(coroutinesExceptionHandler(exceptionLiveData)) {
             liveData.postValue(
@@ -25,5 +35,10 @@ class SplashViewModel(private val dataRepository: DataRepositoryInterface) : Bas
             )
         }
 
+    /**
+     * Turns MutableLiveData to LiveData to prevent accidental post value
+     *
+     * @return LiveData of type [ViewNavigationEnum]
+     */
     fun getNextPageLiveData(): LiveData<ViewNavigationEnum> = liveData
 }

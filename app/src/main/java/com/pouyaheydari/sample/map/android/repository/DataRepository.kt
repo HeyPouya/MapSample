@@ -5,6 +5,12 @@ import com.pouyaheydari.sample.map.android.pojo.VehiclesData
 import com.pouyaheydari.sample.map.android.repository.local.LocalRepository
 import com.pouyaheydari.sample.map.android.repository.network.NetworkRepository
 
+/**
+ * All needed api's are gathered here
+ *
+ * @property networkRepository
+ * @property localRepository
+ */
 class DataRepository(
     private val networkRepository: NetworkRepository,
     private val localRepository: LocalRepository

@@ -3,8 +3,8 @@ package com.pouyaheydari.sample.map.android.features.splash
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.pouyaheydari.sample.map.android.MainCoroutineRule
 import com.pouyaheydari.sample.map.android.features.FakeDataRepository
+import com.pouyaheydari.sample.map.android.features.getVehiclesList
 import com.pouyaheydari.sample.map.android.getOrAwaitValue
-import com.pouyaheydari.sample.map.android.pojo.Vehicle
 import com.pouyaheydari.sample.map.android.pojo.ViewNavigationEnum
 import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -26,32 +26,7 @@ internal class SplashViewModelTest {
 
     private lateinit var viewModel: SplashViewModel
     private lateinit var repository: DataRepositoryInterface
-    private val vehicleList = listOf(
-        Vehicle(
-            null,
-            53F,
-            "https://snapp.ir/assets/test/snapp_map@2x.png",
-            35.7575154,
-            51.4104956,
-            "ECO"
-        ),
-        Vehicle(
-            null,
-            205F,
-            "https://snapp.ir/assets/test/snapp_map@2x.png",
-            35.7580966,
-            51.4094662,
-            "ECO"
-        ),
-        Vehicle(
-            null,
-            324F,
-            "https://snapp.ir/assets/test/snapp_map_st2.png",
-            35.7577213,
-            51.4092553,
-            "PLUS"
-        )
-    )
+    private val vehicleList = getVehiclesList()
 
     @Before
     fun setUp() {

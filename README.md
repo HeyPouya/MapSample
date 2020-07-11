@@ -2,7 +2,7 @@
 An Android application to learn latest technologies in android world!
 
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![Build Status](https://travis-ci.org/SirLordPouya/MusicManager.svg?branch=master)](https://travis-ci.org/SirLordPouya/MusicManager)
+[![Build Status](https://travis-ci.org/SirLordPouya/MapSample.svg?branch=master)](https://travis-ci.org/SirLordPouya/MapSample)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/285103ecc0d34b948543d49045c05880)](https://www.codacy.com/manual/SirLordPouya/MapSample?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SirLordPouya/MapSample&amp;utm_campaign=Badge_Grade)
 <p align="center">
 <img src="https://raw.githubusercontent.com/SirLordPouya/MusicManager/master/shots/appicon.png" width="250">
@@ -35,7 +35,7 @@ Technologies that have been used in this projects are :
 
 ### API
 
-All the api is provided by the most famouse online taxi service in Iran. for more information please visit their website.
+The api is provided by the most famouse online taxi service in Iran. for more information please visit their website.
 
 ## License
 

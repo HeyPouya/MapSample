@@ -18,6 +18,10 @@ import com.pouyaheydari.sample.map.android.pojo.Vehicle
 import com.pouyaheydari.sample.map.android.utils.getBitmap
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * MapsFragment to show the available cars on map to the user
+ *
+ */
 class MapsFragment : BaseFragment(), OnMapReadyCallback {
 
     private val viewModel: MapsViewModel by viewModel()

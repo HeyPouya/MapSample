@@ -12,6 +12,10 @@ import kotlinx.android.synthetic.main.item_toolbar_back.*
 import kotlinx.android.synthetic.main.vehicle_list_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Shows a list of previously fetched [com.pouyaheydari.sample.map.android.pojo.Vehicle] when user is offline
+ *
+ */
 class VehicleListFragment : BaseFragment() {
 
     private val viewModel: VehicleListViewModel by viewModel()

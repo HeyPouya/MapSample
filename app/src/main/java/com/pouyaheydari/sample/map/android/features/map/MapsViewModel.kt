@@ -9,9 +9,19 @@ import com.pouyaheydari.sample.map.android.repository.DataRepositoryInterface
 import com.pouyaheydari.sample.map.android.utils.coroutinesExceptionHandler
 import kotlinx.coroutines.launch
 
+/**
+ * Map page ViewModel
+ *
+ * @property repository
+ */
 class MapsViewModel(private val repository: DataRepositoryInterface) : BaseViewModel() {
     private val liveData = MutableLiveData<VehiclesData>()
 
+    /**
+     * Fetches vehicles data from server to show them on map
+     *
+     *
+     */
     fun getVehicles() = viewModelScope.launch(coroutinesExceptionHandler(exceptionLiveData)) {
         val vehicles = repository.getVehicles()
         liveData.postValue(vehicles)

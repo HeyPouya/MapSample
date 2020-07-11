@@ -15,6 +15,10 @@ import com.pouyaheydari.sample.map.android.pojo.ViewNavigationEnum
 import com.pouyaheydari.sample.map.android.utils.isNetworkAvailable
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Splash fragment that decides wich page must be shown to the user based on internet connection
+ *
+ */
 class SplashFragment : BaseFragment() {
 
     private val viewModel: SplashViewModel by viewModel()

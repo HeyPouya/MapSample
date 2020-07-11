@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -39,7 +40,7 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
     private fun showMarkers(googleMap: GoogleMap?, vehicles: List<Vehicle>) {
         vehicles.forEach { vehicle ->
             val location = LatLng(vehicle.lat, vehicle.lng)
-            getBitmap(vehicle.image_url) { bitmap ->
+            getBitmap(requireContext(), vehicle.image_url) { bitmap ->
                 googleMap?.addMarker(
                     MarkerOptions()
                         .position(location)
@@ -48,6 +49,13 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
                 )
             }
         }
+        zoomToTheLastVehicle(googleMap, vehicles.last())
+    }
+
+    private fun zoomToTheLastVehicle(googleMap: GoogleMap?, vehicle: Vehicle) {
+        googleMap?.animateCamera(
+            CameraUpdateFactory.newLatLngZoom(LatLng(vehicle.lat, vehicle.lng), 14F)
+        )
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {

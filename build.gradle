@@ -2,10 +2,11 @@
 ext {
     lifecycle_version = "2.2.0"
     koin_version = "2.1.6"
-    coroutines_version = "1.3.6"
+    coroutines_version = "1.3.7"
     moshi_version = "1.9.3"
     retrofit_versoin = '2.9.0'
     room_version = "2.2.5"
+    glide_version ="4.11.0"
 }
 buildscript {
     ext.kotlin_version = "1.3.72"
@@ -21,6 +22,10 @@ buildscript {
 
         // Navigation Component
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+        // Junit5 for Android
+        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
+
     }
 }
 

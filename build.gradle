@@ -20,12 +20,6 @@ buildscript {
         classpath "com.android.tools.build:gradle:4.0.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        // Navigation Component
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
-
-        // Junit5 for Android
-        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.6.2.0"
-
     }
 }
 

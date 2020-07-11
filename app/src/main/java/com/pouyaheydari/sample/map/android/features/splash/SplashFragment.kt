@@ -26,6 +26,10 @@ class SplashFragment : BaseFragment() {
         return inflater.inflate(R.layout.splash_fragment, container, false)
     }
 
+    override fun tryAgainDialogAction() {
+        viewModel.decideNextView(isNetworkAvailable(requireContext()))
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

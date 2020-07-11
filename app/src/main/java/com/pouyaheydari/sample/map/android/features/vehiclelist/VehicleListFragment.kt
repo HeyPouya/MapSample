@@ -24,6 +24,10 @@ class VehicleListFragment : BaseFragment() {
         return inflater.inflate(R.layout.vehicle_list_fragment, container, false)
     }
 
+    override fun tryAgainDialogAction() {
+        viewModel.getVehicles()
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         txtTitle.text = getString(R.string.vehicle_list)
@@ -31,6 +35,7 @@ class VehicleListFragment : BaseFragment() {
         viewModel.getVehicleListLiveData().observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
+        viewModel.getVehicles()
     }
 
     private fun setUpRecyclerView() {

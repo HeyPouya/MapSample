@@ -10,7 +10,7 @@ An Android application to learn latest technologies in android world!
 
 MapSample is an Android application that demonstrates how you can use map, markers and other Android Architecture Components.
 
-<img src="https://raw.githubusercontent.com/SirLordPouya/MusicManager/master/shots/Screenshot_2.png" width="250"> <img src="https://raw.githubusercontent.com/SirLordPouya/MusicManager/master/shots/Screenshot_3.png" width="250"> <img src="https://raw.githubusercontent.com/SirLordPouya/MusicManager/master/shots/Screenshot_4.png" width="250">
+<img src="https://raw.githubusercontent.com/SirLordPouya/MapSample/master/pics/Screenshot_1.png" width="250"> <img src="https://raw.githubusercontent.com/SirLordPouya/MapSample/master/pics/Screenshot_2.png" width="250"> <img src="https://raw.githubusercontent.com/SirLordPouya/MapSample/master/pics/Screenshot_3.png" width="250">
 
 ## Description
 

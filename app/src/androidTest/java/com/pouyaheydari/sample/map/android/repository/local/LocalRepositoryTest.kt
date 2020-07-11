@@ -23,9 +23,9 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class LocalRepositoryTest {
 
-    lateinit var vehicleDao: VehicleDao
-    lateinit var db: AppDatabase
-    lateinit var localRepository: LocalRepository
+    private lateinit var vehicleDao: VehicleDao
+    private lateinit var db: AppDatabase
+    private lateinit var localRepository: LocalRepository
     private val vehicleList = getVehiclesList()
 
     @get:Rule

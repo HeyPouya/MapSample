@@ -37,6 +37,7 @@ class MapsViewModelTest {
     @ExperimentalCoroutinesApi
     @Test
     fun testGettingDataOnViewModelInitialization() {
+        viewModel.getVehicles()
         runBlockingTest { repository.insertVehicle(vehicleList) }
         viewModel.getVehicleLiveData().getOrAwaitValue()
 

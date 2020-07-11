@@ -33,8 +33,10 @@ class VehicleListViewModelTest {
         viewModel = VehicleListViewModel(repository)
     }
 
+    @ExperimentalCoroutinesApi
     @Test
     fun getVehicleListData() {
+        viewModel.getVehicles()
         runBlockingTest { repository.insertVehicle(vehicleList) }
         viewModel.getVehicleListLiveData().getOrAwaitValue()
 

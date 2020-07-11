@@ -31,16 +31,18 @@ class VehicleListFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         txtTitle.text = getString(R.string.vehicle_list)
+        observeErrorMessage(viewModel.getExceptionData())
         setUpRecyclerView()
         viewModel.getVehicleListLiveData().observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
-        viewModel.getVehicles()
+
+        if (savedInstanceState == null)
+            viewModel.getVehicles()
     }
 
     private fun setUpRecyclerView() {
         adapter = VehicleListAdapter()
         recycler.adapter = adapter
     }
-
 }

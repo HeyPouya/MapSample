@@ -21,6 +21,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class MapsFragment : BaseFragment(), OnMapReadyCallback {
 
     private val viewModel: MapsViewModel by viewModel()
+    private var savedInstanceState: Bundle? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,6 +38,8 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        this.savedInstanceState = savedInstanceState
+        observeErrorMessage(viewModel.getExceptionData())
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
     }
@@ -63,7 +66,8 @@ class MapsFragment : BaseFragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
-        viewModel.getVehicles()
+        if (savedInstanceState == null)
+            viewModel.getVehicles()
         viewModel.getVehicleLiveData().observe(viewLifecycleOwner, Observer {
             showMarkers(googleMap, it.vehicles)
         })

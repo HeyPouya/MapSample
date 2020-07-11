@@ -27,7 +27,7 @@ abstract class BaseFragment : Fragment() {
         AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.error_fetching_data))
             .setMessage("An error accrued while fetching data. Please try again ")
-            .setPositiveButton(getString(R.string.try_again)) { dialogInterface: DialogInterface, _: Int -> tryAgainDialogAction() }
+            .setPositiveButton(getString(R.string.try_again)) { _: DialogInterface, _: Int -> tryAgainDialogAction() }
             .show()
     }
 

@@ -33,6 +33,7 @@ class SplashFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeErrorMessage(viewModel.getExceptionData())
         viewModel.getNextPageLiveData().observe(viewLifecycleOwner, Observer {
             when (it) {
                 ViewNavigationEnum.MAP -> findNavController().navigate(R.id.action_splashFragment_to_mapsFragment)

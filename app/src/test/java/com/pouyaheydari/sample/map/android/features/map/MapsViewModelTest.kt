@@ -14,6 +14,10 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+/**
+ * A class to test [MapsViewModel]
+ *
+ */
 class MapsViewModelTest {
 
     @get:Rule

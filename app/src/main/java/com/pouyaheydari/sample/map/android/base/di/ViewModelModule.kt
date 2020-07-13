@@ -7,7 +7,7 @@ import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 /**
- * Represents instance of all ViewModels and injects [DataRepository] in ViewModels.
+ * Represents instance of all ViewModels and injects [com.pouyaheydari.sample.map.android.repository.DataRepository] in ViewModels.
  */
 val viewModelModule = module {
     viewModel { SplashViewModel(get()) }

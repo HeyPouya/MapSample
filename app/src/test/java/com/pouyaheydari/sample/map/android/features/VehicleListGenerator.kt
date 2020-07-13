@@ -2,6 +2,10 @@ package com.pouyaheydari.sample.map.android.features
 
 import com.pouyaheydari.sample.map.android.pojo.Vehicle
 
+/**
+ * Generates a list of vehicles to use as a fake response
+ *
+ */
 fun getVehiclesList() = listOf(
     Vehicle(
         null,

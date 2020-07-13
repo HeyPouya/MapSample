@@ -15,7 +15,11 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-internal class SplashViewModelTest {
+/**
+ * A class to test [SplashViewModel]
+ *
+ */
+class SplashViewModelTest {
 
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()

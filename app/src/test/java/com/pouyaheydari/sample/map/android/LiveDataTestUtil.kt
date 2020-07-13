@@ -7,6 +7,15 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 
+/**
+ * Extension function to observe LiveData to be able to get the value out of it
+ *
+ * @param T
+ * @param time
+ * @param timeUnit
+ * @param afterObserve
+ * @return
+ */
 @VisibleForTesting(otherwise = VisibleForTesting.NONE)
 fun <T> LiveData<T>.getOrAwaitValue(
     time: Long = 2,

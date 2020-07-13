@@ -11,9 +11,12 @@ import com.pouyaheydari.sample.map.android.pojo.Vehicle
 import com.pouyaheydari.sample.map.android.pojo.VehicleTypeEnum
 import kotlinx.android.synthetic.main.vehicle_list_item.view.*
 
+/**
+ * VehiclesListAdapter that shows offline list of vehicles
+ *
+ */
 class VehicleListAdapter :
     ListAdapter<Vehicle, VehicleListAdapter.VehicleListViewHolder>(VehicleListDiffUtils()) {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VehicleListViewHolder {
         val view =
@@ -21,44 +24,48 @@ class VehicleListAdapter :
         return VehicleListViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: VehicleListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VehicleListViewHolder, position: Int) =
         holder.bind(getItem(position))
-    }
 
+    /**
+     * ViewHolder class for [VehicleListAdapter]
+     *
+     * @constructor takes the item view to be shown on VehicleList recycler view
+     *
+     *
+     * @param itemView
+     */
     inner class VehicleListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(item: Vehicle) {
-            with(itemView) {
-                with(item) {
-                    txtType.text = context.getString(R.string.vehicle_type, type)
-                    txtLat.text = context.getString(R.string.vehicle_lat, lat.toString())
-                    txtLng.text = context.getString(R.string.vehicle_lng, lng.toString())
-                    txtBearing.text =
-                        context.getString(R.string.vehicle_bearing, bearing.toString())
+        fun bind(item: Vehicle) = with(itemView) {
+            with(item) {
+                txtType.text = context.getString(R.string.vehicle_type, type)
+                txtLat.text = context.getString(R.string.vehicle_lat, lat.toString())
+                txtLng.text = context.getString(R.string.vehicle_lng, lng.toString())
+                txtBearing.text =
+                    context.getString(R.string.vehicle_bearing, bearing.toString())
 
-                    when (type) {
-                        VehicleTypeEnum.ECO.type -> cardRoot.setCardBackgroundColor(
-                            ContextCompat.getColor(
-                                context,
-                                R.color.colorPrimary
-                            )
+                when (type) {
+                    VehicleTypeEnum.ECO.type -> cardRoot.setCardBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorPrimary
                         )
-                        VehicleTypeEnum.PLUS.type -> cardRoot.setCardBackgroundColor(
-                            ContextCompat.getColor(
-                                context,
-                                R.color.colorPlus
-                            )
+                    )
+                    VehicleTypeEnum.PLUS.type -> cardRoot.setCardBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorPlus
                         )
-                        else -> cardRoot.setCardBackgroundColor(
-                            ContextCompat.getColor(
-                                context,
-                                R.color.colorPrimaryDark
-                            )
+                    )
+                    else -> cardRoot.setCardBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorPrimaryDark
                         )
-                    }
+                    )
                 }
             }
         }
-
     }
 
 }

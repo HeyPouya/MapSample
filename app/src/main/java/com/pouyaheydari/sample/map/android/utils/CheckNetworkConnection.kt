@@ -5,7 +5,12 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 
-
+/**
+ * Determines if the wifi / cellular network is available
+ *
+ * @param context
+ * @return
+ */
 fun isNetworkAvailable(context: Context): Boolean {
 
     val connectivityManager =

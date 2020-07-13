@@ -3,7 +3,7 @@ package com.pouyaheydari.sample.map.android.repository.local
 import com.pouyaheydari.sample.map.android.room.VehicleDao
 
 /**
- * All database Dao's will be gathered here
+ * All database DAO's will be gathered here
  *
  * @property vehicleDao
  */

@@ -5,7 +5,7 @@ An Android application to learn latest technologies in android world!
 [![Build Status](https://travis-ci.org/SirLordPouya/MapSample.svg?branch=master)](https://travis-ci.org/SirLordPouya/MapSample)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/285103ecc0d34b948543d49045c05880)](https://www.codacy.com/manual/SirLordPouya/MapSample?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SirLordPouya/MapSample&amp;utm_campaign=Badge_Grade)
 <p align="center">
-<img src="https://raw.githubusercontent.com/SirLordPouya/MusicManager/master/shots/appicon.png" width="250">
+<img src="https://raw.githubusercontent.com/SirLordPouya/MapSample/master/pics/icon.png" width="250">
 </p>
 
 MapSample is an Android application that demonstrates how you can use map, markers and other Android Architecture Components.

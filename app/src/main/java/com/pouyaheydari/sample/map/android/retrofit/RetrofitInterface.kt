@@ -9,6 +9,6 @@ import retrofit2.http.GET
  */
 interface RetrofitInterface {
 
-    @GET("assets/test/document.json")
+    @GET("vehicles.json")
     suspend fun getVehicles(): VehiclesData
 }

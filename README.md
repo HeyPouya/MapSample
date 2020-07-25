@@ -33,9 +33,14 @@ Technologies that have been used in this projects are :
 *   DiffUtils
 *   ListAdapter
 
+### Map
+
+Just remember to be able to use the map feature, you must obtain a map API key from Google and replace it with res-> values-> google_maps_key -> YOUR_API_KEY.
+To get the maps API key, visit [Google console](https://console.cloud.google.com/)
+
 ### API
 
-The api is provided by the most famouse online taxi service in Iran. for more information please visit their website.
+The api is provided by me in my personal website: [PouyaHeydari.com](https://pouyaheydari.com)
 
 ## License
 
